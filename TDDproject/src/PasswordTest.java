@@ -14,14 +14,14 @@ public class PasswordTest {
 	public void test() {
 		assertFalse(pass.passwordValidation("abbc"));
 		assertFalse(pass.passwordValidation(""));
-		assertFalse(pass.passwordValidation("@s"));
+		assertFalse(pass.passwordValidation("ADCVFGtted"));
 		assertFalse(pass.passwordValidation("#@$%"));
 	}
 	@Test
 	public void testSucess() {
-		assertTrue(pass.passwordValidation("abcabcabc"));
-		assertTrue(pass.passwordValidation("abcabc123"));
-		assertTrue(pass.passwordValidation("abcabca@s"));
-		assertTrue(pass.passwordValidation("abcabca$#%"));
+		assertTrue(pass.passwordValidation("abAbc1abc$"));
+		assertTrue(pass.passwordValidation("ab&cCbc123"));
+		assertTrue(pass.passwordValidation("abcaD3b**caa"));
+		assertTrue(pass.passwordValidation("@asAAA1Asdk"));
 	}
 }

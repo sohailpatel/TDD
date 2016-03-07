@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 public class password {
 	Pattern pattern;
 	Matcher matcher;
-	String validateBy="[A-Za-z0-9*&^%$#@!]+";
+	String validateBy="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[*&%$#@!])[A-Za-z0-9*&%$#@]*$";
 	public boolean passwordValidation(String password){
 		pattern=Pattern.compile(validateBy);
 		matcher=pattern.matcher(password);
